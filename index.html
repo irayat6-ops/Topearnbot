@@ -530,8 +530,8 @@
                     <div class="progress-fill" id="progress-fill"></div>
                 </div>
                 <div class="progress-text">
-                    <span>0 টাকা</span>
-                    <span>20 টাকা</span>
+                    <span> 0 টাকা</span>
+                    <span>0.000usdtটাকা</span>
                 </div>
             </div>
             
@@ -541,7 +541,7 @@
             
             <div class="action-buttons">
                 <button class="btn btn-primary" id="watch-ad-btn" onclick="watchAd()">
-                    <i class="fas fa-play"></i> বিজ্ঞাপন দেখুন (২ টাকা)
+                    <i class="fas fa-play"></i> বিজ্ঞাপন দেখুন 0.002(usdt)
                 </button>
                 <button class="btn btn-success" id="auto-ad-btn" onclick="startAutoAds()">
                     <i class="fas fa-robot"></i> স্বয়ংক্রিয় বিজ্ঞাপন
@@ -550,7 +550,7 @@
                     <i class="fas fa-stop"></i> বন্ধ করুন
                 </button>
                 <button class="btn btn-secondary" onclick="showWithdrawForm()">
-                    <i class="fas fa-wallet"></i> টাকা উত্তোলন
+                    <i class="fas fa-wallet"></i> withdraw
                 </button>
             </div>
             
@@ -576,7 +576,7 @@
                     <div>আমন্ত্রিত: <strong id="referral-count">0</strong></div>
                     <div>আয়: <strong id="referral-earnings">0.00</strong> টাকা</div>
                 </div>
-                <p style="font-size: 14px; margin-bottom: 10px;">আপনার রেফারেল লিঙ্ক শেয়ার করুন এবং প্রতিটি বন্ধুর জন্য ৫ টাকা বোনাস পান!</p>
+                <p style="font-size: 14px; margin-bottom: 10px;">আপনার রেফারেল লিঙ্ক শেয়ার করুন এবং প্রতিটি বন্ধুর জন্য 0.1 usdt বোনাস পান!</p>
                 <div class="referral-link-container">
                     <input type="text" id="referral-link" readonly>
                     <button id="copy-referral" onclick="copyReferralLink()">কপি</button>
@@ -584,7 +584,7 @@
             </div>
             
             <div class="rate-info">
-                <p><i class="fas fa-ad"></i> প্রতি বিজ্ঞাপন = ২ টাকা</p>
+                <p><i class="fas fa-ad"></i> প্রতি বিজ্ঞাপন =  টাকা</p>
                 <p><i class="fas fa-money-bill-wave"></i> ন্যূনতম উত্তোলন: ২০ টাকা</p>
                 <p><i class="fas fa-gift"></i> রেফারেল বোনাস: ৫ টাকা প্রতি ব্যবহারকারী</p>
             </div>
@@ -620,9 +620,9 @@
             </div>
             
             <div class="rate-info">
-                <p><i class="fas fa-ad"></i> প্রতি বিজ্ঞাপন = ২ টাকা</p>
-                <p><i class="fas fa-gift"></i> রেফারেল বোনাস: ৫ টাকা প্রতি ব্যবহারকারী</p>
-            </div>
+                <p><i class="fas fa-ad"></i> প্রতি বিজ্ঞাপন = 0.002usdt</p>
+                <p><i class="fas fa-gift"></i> রেফারেল বোনাস: 0.1 usdt প্রতি ব্যবহারকারী</p>
+            </div
         </div>
         
         <!-- উত্তোলন পেজ -->
@@ -631,13 +631,13 @@
             
             <div class="stat-card">
                 <h3>মোট আয়</h3>
-                <p id="total-earned-withdraw">0.00 <small>টাকা</small></p>
+                <p id="total-earned-withdraw">0.00 <small>usdt</small></p>
             </div>
             
             <div class="withdraw-section" id="withdraw-section">
                 <div class="form-group">
-                    <label for="withdraw-amount">পরিমাণ (টাকা)</label>
-                    <input type="number" id="withdraw-amount" class="form-control" placeholder="টাকার পরিমাণ লিখুন" min="20">
+                    <label for="withdraw-amount">পরিমাণ (usdt)</label>
+                    <input type="number" id="withdraw-amount" class="form-control" placeholder="usdt পরিমাণ লিখুন" min="0.12">
                 </div>
                 <div class="form-group">
                     <label for="payment-method">পেমেন্ট মাধ্যম</label>
@@ -646,11 +646,13 @@
                         <option value="bkash">bKash</option>
                         <option value="nagad">Nagad</option>
                         <option value="rocket">Rocket</option>
+                        <option value="usdt"> address</option>
+                        বিশেষ দ্রষ্টব্য usdt মার্কেটের দাম অনুযায়ী আপনার নগদ বিকাশ রকেট একাউন্টের টাকা পাঠানো হবে 
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="withdraw-phone">মোবাইল নম্বর</label>
-                    <input type="text" id="withdraw-phone" class="form-control" placeholder="01XXXXXXXXX" pattern="01[3-9]{1}[0-9]{8}">
+                    <label for="withdraw-phone">মোবাইল নম্বরorusdt address</label>
+                    <input type="text" id="withdraw-phone" class="form-control" placeholder="abc or 123" pattern="01[3-9]{1}[0-9]{8}">
                 </div>
                 <button class="btn btn-primary" onclick="withdrawPoints()">
                     <i class="fas fa-paper-plane"></i> অনুরোধ পাঠান
@@ -659,8 +661,8 @@
             </div>
             
             <div class="rate-info">
-                <p><i class="fas fa-money-bill-wave"></i> ন্যূনতম উত্তোলন: ২০ টাকা</p>
-                <p><i class="fas fa-clock"></i> উত্তোলন প্রসেসিং সময়: ২৪-৪৮ ঘন্টা</p>
+                <p><i class="fas fa-money-bill-wave"></i> ন্যূনতম উত্তোলন: 0.12 usdt </p>
+                <p><i class="fas fa-clock"></i> উত্তোলন প্রসেসিং সময়: 1-৪৮ ঘন্টা</p>
             </div>
         </div>
         
@@ -671,7 +673,7 @@
             <div class="notification-list">
                 <div class="stat-card">
                     <h3><i class="fas fa-info-circle"></i> নতুন আপডেট</h3>
-                    <p>স্বয়ংক্রিয় বিজ্ঞাপন সিস্টেম চালু হয়েছে। এখন থেকে স্বয়ংক্রিয়ভাবে বিজ্ঞাপন দেখে টাকা আয় করতে পারবেন।</p>
+                    <p>স্বয়ংক্রিয় বিজ্ঞাপন সিস্টেম চালু হয়েছে। এখন থেকে স্বয়ংক্রিয়ভাবে বিজ্ঞাপন দেখে usdt আয় করতে পারবেন।</p>
                     <small>২ দিন আগে</small>
                 </div>
                 
@@ -683,7 +685,7 @@
                 
                 <div class="stat-card">
                     <h3><i class="fas fa-exclamation-triangle"></i> গুরুত্বপূর্ণ নোটিশ</h3>
-                    <p>উত্তোলনের জন্য ন্যূনতম ২০ টাকা প্রয়োজন। দয়া করে উত্তোলন করার আগে নিশ্চিত হয়ে নিন।</p>
+                    <p>উত্তোলনের জন্য ন্যূনতম 0.12usdt প্রয়োজন। দয়া করে উত্তোলন করার আগে নিশ্চিত হয়ে নিন।</p>
                     <small>১ সপ্তাহ আগে</small>
                 </div>
             </div>
@@ -721,9 +723,9 @@
 
     <script>
         // Constants
-        const POINTS_PER_AD = 2.00; // প্রতি বিজ্ঞাপনে ২ টাকা
-        const MIN_WITHDRAW_TAKA = 20; // ন্যূনতম উত্তোলন ২০ টাকা
-        const REFERRAL_BONUS = 5.00; // রেফারেল বোনাস ৫ টাকা
+        const POINTS_PER_AD = 0.002usdt // প্রতি বিজ্ঞাপনে 0.002usdt
+        const MIN_WITHDRAW_TAKA = 0.12; // ন্যূনতম উত্তোলন 0.12usdt
+        const REFERRAL_BONUS = 5.00; // রেফারেল বোনাস 0.10usdt
         
         // Telegram Bot Configuration - এখানে আপনার বটের তথ্য দিন
         const BOT_TOKEN = "8210841246:AAF1CJG3eO2L4gHMY6VSgSf_gtv6fCzths0"; // আপনার বট টোকেন
@@ -928,7 +930,7 @@
                     createCoinAnimation();
                     
                     // Show success notification
-                    showNotification(`২ টাকা যোগ হয়েছে! আপনার ব্যালেন্স: ${(earnedPoints + referralEarnings).toFixed(2)} টাকা`, 'success');
+                    showNotification(`0.002 usdt যোগ হয়েছে! আপনার ব্যালেন্স: ${(earnedPoints + referralEarnings).toFixed(0.002)} usdt`, 'success');
                     
                     // Check if earned enough for withdrawal
                     if (earnedPoints + referralEarnings >= MIN_WITHDRAW_TAKA) {
@@ -942,7 +944,7 @@
                             document.getElementById('watch-ad-btn').disabled = false;
                             document.getElementById('watch-ad-btn-earn').disabled = false;
                             watchAd();
-                        }, 10000); // 10 seconds delay between auto ads
+                        }, 10000); // 7 seconds delay between auto ads
                     } else {
                         isAdLoading = false;
                         document.getElementById('watch-ad-btn').disabled = false;
@@ -972,8 +974,8 @@
         function createCoinAnimation() {
             const button = document.getElementById('watch-ad-btn');
             const rect = button.getBoundingClientRect();
-            const x = rect.left + rect.width / 2;
-            const y = rect.top + rect.height / 2;
+            const x = rect.left + rect.width / 0.002;
+            const y = rect.top + rect.height / 0.002;
             
             const coin = document.createElement('div');
             coin.className = 'coin-animation';
@@ -1022,15 +1024,15 @@
             
             if (totalEarnings < MIN_WITHDRAW_TAKA) {
                 document.getElementById('withdraw-status').textContent = 
-                    `ন্যূনতম উত্তোলন পরিমাণ ${MIN_WITHDRAW_TAKA} টাকা। আপনার আছে ${totalEarnings.toFixed(2)} টাকা।`;
+                    `ন্যূনতম উত্তোলন পরিমাণ ${MIN_WITHDRAW_TAKA} টাকা। আপনার আছে ${totalEarnings.toFixed(0.002)} usdt।`;
                 document.getElementById('withdraw-status').className = 'error-message';
                 document.getElementById('withdraw-section').style.display = 'block';
                 return;
             }
             
             document.getElementById('withdraw-amount').value = '';
-            document.getElementById('withdraw-amount').placeholder = `সর্বোচ্চ: ${totalEarnings.toFixed(2)} টাকা`;
-            document.getElementById('withdraw-amount').max = totalEarnings.toFixed(2);
+            document.getElementById('withdraw-amount').placeholder = `সর্বোচ্চ: ${totalEarnings.toFixed(0.002)} usdt`;
+            document.getElementById('withdraw-amount').max = totalEarnings.toFixed(0.002);
             document.getElementById('withdraw-phone').value = '';
             document.getElementById('payment-method').selectedIndex = 0;
             document.getElementById('withdraw-status').textContent = '';
@@ -1073,6 +1075,9 @@
             if (!phoneNumber || !/^01[3-9][0-9]{8}$/.test(phoneNumber)) {
                 withdrawStatus.textContent = 'দয়া করে একটি বৈধ বাংলাদেশী মোবাইল নম্বর লিখুন।';
                 withdrawStatus.className = 'error-message';
+                if (! USDtaddress  || !/^01[3-9][0-9]{8}$/.test( usdt address ) {
+                withdrawStatus.textContent = 'দয়া করে একটি বৈধ  usdt address লেখুন 
+                withdrawStatus.className = 'error-message';
                 return;
             }
             
@@ -1108,7 +1113,7 @@
             sendWithdrawRequestToAdmin(message);
             
             // Show success message
-            withdrawStatus.textContent = 'উত্তোলন অনুরোধ সফলভাবে জমা দেওয়া হয়েছে! প্রসেসিং করতে ২৪-৪৮ ঘন্টা সময় লাগতে পারে।';
+            withdrawStatus.textContent = 'উত্তোলন অনুরোধ সফলভাবে জমা দেওয়া হয়েছে! প্রসেসিং করতে 1-৪৮ ঘন্টা সময় লাগতে পারে।';
             withdrawStatus.className = 'success-message';
             
             // Show notification
@@ -1156,4 +1161,5 @@
     </script>
 </body>
 </html>
+
 
